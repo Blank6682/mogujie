@@ -1,0 +1,17 @@
+/*background-color背景颜色
+ [bg-primary] {
+    background-color: $background-color-primary;
+  }
+  ......
+----------------*/
+@each $style
+  in (
+    primary $background-color-primary,
+    secondary $background-color-secondary,
+    tertaiary $background-color-tertiary
+  )
+{
+  [bg-#{nth($style,1)}] {
+    background-color: #{nth($style, 2)};
+  }
+}

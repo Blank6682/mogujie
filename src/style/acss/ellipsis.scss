@@ -1,0 +1,10 @@
+/*ellipsis省略号
+[ellipsis-(1-4)]{
+    文字行数(1-4)溢出点点点
+}
+-------------------*/
+@for $i from 1 through 4 {
+  [ellipsis#{$i}] {
+    @include ellipsis($i);
+  }
+}

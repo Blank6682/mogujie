@@ -1,0 +1,15 @@
+/*Border 边框
+------------------*/
+[bor-base] {
+  border: $border-base;
+}
+
+@for $i from 1 through 15px {
+  [radius] {
+    border-radius: #{$i}px;
+  }
+}
+
+[circle] {
+  border-radius: 50%;
+}

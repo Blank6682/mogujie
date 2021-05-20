@@ -1,0 +1,57 @@
+/*间距大小
+[ml(1-30)]{
+    margin-left:(1-30)px;
+}
+.....
+-------------------*/
+$direction: (l left, r right, t top, b bottom);
+
+@for $i from 1 through 30 {
+  @each $type in (m, p, v, h, a) {
+    //margin外边距
+    @if $type==m {
+      @each $d in $direction {
+        [m#{nth($d,1)}#{$i}] {
+          margin-#{nth($d,2)}: #{$i}px;
+        }
+      }
+    }
+    //padding内边距
+    @else if $type==p {
+      @each $d in $direction {
+        [p#{nth($d,1)}#{$i}] {
+          pading-#{nth($d,2)}: #{$i}px;
+        }
+      }
+    }
+    //vertical垂直方向间距
+    @else if $type==v {
+      [mv#{$i}] {
+        margin-top: #{$i}px;
+        margin-bottom: #{$i}px;
+      }
+      [pv#{$i}] {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+      }
+    }
+    //horizontal水平方向
+    @else if $type==h {
+      [mh#{$i}] {
+        margin-left: #{$i}px;
+        margin-right: #{$i}px;
+      }
+      [ph#{$i}] {
+        padding-left: #{$i}px;
+        padding-right: #{$i}px;
+      }
+    } @else {
+      [m#{$i}] {
+        margin: #{$i}px;
+      }
+      [p#{$i}] {
+        padding: #{$i}px;
+      }
+    }
+  }
+}
