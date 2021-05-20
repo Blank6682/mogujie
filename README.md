@@ -14,7 +14,7 @@ yarn serve
 ```
 yarn build
 ```
-###响应式布局REM实现
+### 响应式布局REM实现
 ```
 yarn install lib-flexible
 ```
