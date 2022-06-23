@@ -1,19 +1,5 @@
-# mugujie
+# Sass学习的dome
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
 ### 响应式布局REM实现
 ```
 yarn install lib-flexible
